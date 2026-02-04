@@ -1,52 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Navigation Menu</title>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <style>
-        
-        div{
-            display:flex;
-            justify-content: center;
-            font-family: "Bitcount Single", system-ui;
-            font-optical-sizing: auto;
-            font-weight: 100px;
-            font-style: normal;
-            font-variation-settings:
-                "slnt" 0,
-                "CRSV" 0.5,
-                "ELSH" 0,
-                "ELXP" 0;
-            font-size: 50px;
-        }
-        li{
-            margin-left: 60px;
-        }
+        /* Import Font chữ */
         @import url('https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&display=swap');
+
+        /* Thiết lập chung cho font chữ đặc biệt của bạn */
+        body {
+            font-family: "Bitcount Single", system-ui;
+            font-variation-settings: "slnt" 0, "CRSV" 0.5, "ELSH" 0, "ELXP" 0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Khung bao quanh menu (Nav) */
+        nav {
+            display: flex;
+            justify-content: center; /* Căn giữa màn hình */
+            gap: 80px;               /* Khoảng cách giữa 3 cột */
+        }
+
+        /* Cài đặt cho từng cột danh sách */
+        ul {
+            list-style: none; /* Bỏ dấu chấm tròn đầu dòng */
+            padding: 0;
+            text-align: center; /* Căn giữa chữ trong cột */
+        }
+
+        /* Dòng tiêu đề của từng cột (Trang chủ, Hoạt động...) */
+        .title {
+            font-size: 40px;     /* Chữ to */
+            font-weight: bold;
+            color: #d63031;      /* Màu đỏ (hoặc màu bạn thích) */
+            margin-bottom: 15px; /* Cách các mục con ra một chút */
+            display: block;      /* Để nó nằm riêng 1 dòng */
+        }
+
+        /* Các mục con bên dưới */
+        li {
+            font-size: 20px;     /* Chữ nhỏ hơn tiêu đề */
+            margin-bottom: 8px;  /* Khoảng cách giữa các dòng */
+            color: #2d3436;
+            cursor: pointer;     /* Hiển thị bàn tay khi di chuột vào */
+            transition: 0.3s;
+        }
+
+        /* Hiệu ứng khi di chuột vào mục con */
+        li:hover {
+            color: #0984e3;      /* Đổi màu xanh */
+            transform: translateX(5px); /* Dịch chuyển nhẹ sang phải */
+        }
     </style>
-   
-
-
 </head>
 <body>
-    <div>
-        
-        <ul> <i class="fa-brands fa-apple"></i> Trang chủ
+
+    <nav>
+        <ul> 
+            <li class="title"> 
+                <i class="fa-brands fa-apple"></i> Trang chủ 
+            </li>
             <li>Giới thiệu</li>
             <li>Tổ chức</li>
-            
         </ul>
-        <ul> <i class="fa-solid fa-address-book"></i> Hoạt động
+
+        <ul> 
+            <li class="title"> 
+                <i class="fa-solid fa-address-book"></i> Hoạt động 
+            </li>
             <li>Lễ khai giảng</li>
             <li>Hội xuân</li>
             <li>Trải nghiệm</li>
             <li>Lễ 20-11</li>
         </ul>
-        <ul> <i class="fa-solid fa-archway"></i> Liên hệ
-            <li>Số ĐT: 123456789JQK </li>
+
+        <ul> 
+            <li class="title"> 
+                <i class="fa-solid fa-archway"></i> Liên hệ 
+            </li>
+            <li>Số ĐT: 0912345678</li>
         </ul>
-    </div>
+    </nav>
+
 </body>
 </html>
